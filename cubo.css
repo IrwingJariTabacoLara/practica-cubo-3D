@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    perspective: 1000px;
+  }
+  
+  .clock {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s;
+  }
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #ffb8dc;
+    border: 1px solid #59186f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  #hoursFace {
+    transform: rotateY(0deg) translateZ(100px);
+  }
+  
+  #minutesFace {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  #secondsFace {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
